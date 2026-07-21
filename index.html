@@ -13,7 +13,7 @@ body {
     color: #333;
 }
 
-/* ສ່ວນ Header */
+/* Header */
 header {
     background: linear-gradient(135deg, #FFD700, #D4AF37);
     color: #000;
@@ -95,7 +95,6 @@ header p { margin: 0; font-size: 14px; opacity: 0.8; }
     padding: 10px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    cursor: pointer;
 }
 
 .product-item img {
@@ -117,10 +116,11 @@ header p { margin: 0; font-size: 14px; opacity: 0.8; }
     border: none;
     padding: 6px 10px;
     border-radius: 6px;
-    font-size: 13px;
-    margin-bottom: 5px;
+    font-size: 12px;
+    margin-bottom: 6px;
     width: 100%;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .buy-btn {
@@ -134,7 +134,7 @@ header p { margin: 0; font-size: 14px; opacity: 0.8; }
     cursor: pointer;
 }
 
-/* Modal POPUP ຂໍ້ມູນສິນຄ້າ */
+/* Modal Popup ຂໍ້ມູນ */
 .modal {
     display: none;
     position: fixed;
@@ -146,11 +146,11 @@ header p { margin: 0; font-size: 14px; opacity: 0.8; }
 
 .modal-content {
     background-color: #fff;
-    margin: 15% auto;
+    margin: 20% auto;
     padding: 20px;
     border-radius: 15px;
     width: 85%;
-    max-width: 400px;
+    max-width: 380px;
     text-align: left;
     position: relative;
 }
@@ -164,7 +164,7 @@ header p { margin: 0; font-size: 14px; opacity: 0.8; }
     color: #aaa;
 }
 
-.modal-info { margin-top: 10px; line-height: 1.6; }
+.modal-info p { margin: 8px 0; }
 .modal-info span { font-weight: bold; color: #D4AF37; }
 
 a { text-decoration: none; }
@@ -175,7 +175,7 @@ a { text-decoration: none; }
 <body>
 
 <header>
-    <img src="../logo.jpg" alt="RJ OUTLET Logo" class="logo" onerror="this.src='https://via.placeholder.com/110/FFD700/000000?text=RJ+OUTLET'">
+    <img src="logo.jpg" alt="RJ OUTLET Logo" class="logo" onerror="this.src='https://via.placeholder.com/110/FFD700/000000?text=RJ+OUTLET'">
     <h1>RJ OUTLET</h1>
     <p>ແຟຊັ່ນຜູ້ຍິງ ຄຸນນະພາບດີ ສິນຄ້າ OUTLET</p>
 </header>
@@ -218,56 +218,48 @@ a { text-decoration: none; }
         <div class="product-grid">
 
             <div class="product-item shirt">
-                <img src="../shirt1.jpg" onerror="this.src='https://via.placeholder.com/150/FFD700/000000?text=ເສື້ອແຟຊັ່ນ'">
+                <img src="shirt1.jpg" onerror="this.src='https://via.placeholder.com/150/FFD700/000000?text=ເສື້ອແຟຊັ່ນ'">
                 <h4>ເສື້ອແຟຊັ່ນຜູ້ຍິງ</h4>
                 <div class="price">120,000 ກີບ</div>
-                
-                <button class="details-btn" onclick="openDetails('ເສື້ອແຟຊັ່ນຜູ້ຍິງ', '120,000 ກີບ', 'ຂາວ, ດຳ, ຂຽວ, ບົວ', 'S, M, L, XL', 'ເສື້ອຜ້າໄໝນຸ້ມ ສະບາຍ ເໝາະກັບທຸກໂອກາດ')">
+                <button class="details-btn" onclick="openDetails('ເສື້ອແຟຊັ່ນຜູ້ຍິງ', '120,000 ກີບ', 'ຂາວ, ດຳ, ຂຽວ, ບົວ', 'S, M, L, XL', 'ເສື້ອຜ້າໄໝນຸ້ມ ສະບາຍ ໃສ່ໄດ້ທຸກໂອກາດ')">
                     🔍 ເບິ່ງລາຍລະອຽດ (ສີ/Size)
                 </button>
-
                 <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ເສື້ອແຟຊັ່ນຜູ້ຍິງ" target="_blank">
                     <button class="buy-btn">💬 ສັ່ງຊື້ (WhatsApp)</button>
                 </a>
             </div>
 
             <div class="product-item pants">
-                <img src="../pants1.jpg" onerror="this.src='https://via.placeholder.com/150/D4AF37/ffffff?text=ໂສ້ງຢີນ'">
+                <img src="pants1.jpg" onerror="this.src='https://via.placeholder.com/150/D4AF37/ffffff?text=ໂສ້ງຢີນ'">
                 <h4>ໂສ້ງຢີນຜູ້ຍິງ</h4>
                 <div class="price">160,000 ກີບ</div>
-
-                <button class="details-btn" onclick="openDetails('ໂສ້ງຢີນຜູ້ຍິງ', '160,000 ກີບ', 'ຢີນເຂັ້ມ, ຢີນອ່ອນ, ດຳ', 'S (26), M (28), L (30), XL (32)', 'ໂສ້ງຢີນເອວສູງ ເຮັດໃຫ້ຂາຍາວ ເນື້ອຜ້າຍືດຢຸ່ນດີ')">
+                <button class="details-btn" onclick="openDetails('ໂສ້ງຢີນຜູ້ຍິງ', '160,000 ກີບ', 'ຢີນເຂັ້ມ, ຢີນອ່ອນ, ດຳ', 'S (26), M (28), L (30), XL (32)', 'ໂສ້ງຢີນເອວສູງ ຂາຍາວ ຜ້າຍືດຢຸ່ນດີ')">
                     🔍 ເບິ່ງລາຍລະອຽດ (ສີ/Size)
                 </button>
-
                 <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ໂສ້ງຢີນຜູ້ຍິງ" target="_blank">
                     <button class="buy-btn">💬 ສັ່ງຊື້ (WhatsApp)</button>
                 </a>
             </div>
 
             <div class="product-item skirt">
-                <img src="../skirt1.jpg" onerror="this.src='https://via.placeholder.com/150/ffb6c1/000000?text=ກະໂປ່ງແຟຊັ່ນ'">
+                <img src="skirt1.jpg" onerror="this.src='https://via.placeholder.com/150/ffb6c1/000000?text=ກະໂປ່ງແຟຊັ່ນ'">
                 <h4>ກະໂປ່ງແຟຊັ່ນງາມໆ</h4>
                 <div class="price">140,000 ກີບ</div>
-
-                <button class="details-btn" onclick="openDetails('ກະໂປ່ງແຟຊັ່ນງາມໆ', '140,000 ກີບ', 'ຄີມ, ບົວ, ດຳ', 'Free Size (ເອວຍືດ 24-30)', 'ກະໂປ່ງຊັ້ນໆ ໜ້າຮັກ ໃສ່ງ່າຍ')">
+                <button class="details-btn" onclick="openDetails('ກະໂປ່ງແຟຊັ່ນງາມໆ', '140,000 ກີບ', 'ຄີມ, ບົວ, ດຳ', 'Free Size (ເອວຍືດ 24-30)', 'ກະໂປ່ງຊັ້ນໆ ໜ້າຮັກ ໃສ່ສະບາຍ')">
                     🔍 ເບິ່ງລາຍລະອຽດ (ສີ/Size)
                 </button>
-
                 <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ກະໂປ່ງແຟຊັ່ນງາມໆ" target="_blank">
                     <button class="buy-btn">💬 ສັ່ງຊື້ (WhatsApp)</button>
                 </a>
             </div>
 
             <div class="product-item bag">
-                <img src="../bag1.jpg" onerror="this.src='https://via.placeholder.com/150/8a2be2/ffffff?text=ກະເປົາແຟຊັ່ນ'">
+                <img src="bag1.jpg" onerror="this.src='https://via.placeholder.com/150/8a2be2/ffffff?text=ກະເປົາແຟຊັ່ນ'">
                 <h4>ກະເປົາຖືແຟຊັ່ນ</h4>
                 <div class="price">180,000 ກີບ</div>
-
-                <button class="details-btn" onclick="openDetails('ກະເປົາຖືແຟຊັ່ນ', '180,000 ກີບ', 'ດຳ, ຂາວ, ນ້ຳຕານ', 'ມາດຕະຖານ (20cm x 15cm)', 'ກະເປົາໜັງ PU ຢ່າງດີ ມີສາຍພາຍຍາວ')">
+                <button class="details-btn" onclick="openDetails('ກະເປົາຖືແຟຊັ່ນ', '180,000 ກີບ', 'ດຳ, ຂາວ, ນ້ຳຕານ', '20cm x 15cm', 'ກະເປົາໜັງ PU ຢ່າງດີ ມີສາຍພາຍຍາວ')">
                     🔍 ເບິ່ງລາຍລະອຽດ (ສີ/Size)
                 </button>
-
                 <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ກະເປົາຖືແຟຊັ່ນ" target="_blank">
                     <button class="buy-btn">💬 ສັ່ງຊື້ (WhatsApp)</button>
                 </a>
@@ -314,7 +306,6 @@ function filterCategory(category, btnElement) {
     });
 }
 
-/* ຟັງຊັນເປີດ POPUP ຂໍ້ມູນ */
 function openDetails(title, price, colors, sizes, desc) {
     document.getElementById('modalTitle').innerText = title;
     document.getElementById('modalPrice').innerText = price;
