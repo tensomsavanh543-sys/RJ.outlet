@@ -134,7 +134,7 @@ header p { margin: 0; font-size: 14px; opacity: 0.8; }
     cursor: pointer;
 }
 
-/* Modal Popup ຂໍ້ມູນ ແລະ ຫຼາຍຮູບ */
+/* Modal Popup */
 .modal {
     display: none;
     position: fixed;
@@ -164,7 +164,6 @@ header p { margin: 0; font-size: 14px; opacity: 0.8; }
     color: #aaa;
 }
 
-/* ຮູບໃຫຍ່ ແລະ ຮູບຍ່ອຍໃນ Modal */
 .main-preview-img {
     width: 100%;
     height: 220px;
@@ -248,12 +247,26 @@ a { text-decoration: none; }
 
         <div class="product-grid">
 
+            <div class="product-item bag">
+                <img src="bag1_1.jpg" onerror="this.src='https://via.placeholder.com/150/8a2be2/ffffff?text=Uniqlo+Bag'">
+                <h4>ກະເປົາຄອດບໍດີ້ Uniqlo🛒</h4>
+                <div class="price">180,000 ກີບ</div>
+                
+                <button class="details-btn" onclick="openDetails('ກະເປົາຄອດບໍດີ້ Uniqlo🛒', '180,000 ກີບ', 'ມ່ວງ, ແດງ, ຄຣີມ, ນູດ, ກະປິ', ['bag1_1.jpg', 'bag1_2.jpg', 'bag1_3.jpg'])">
+                    🖼️ ເບິ່ງຫຼາຍໆຮູບ / ສີທີ່ມີ
+                </button>
+                
+                <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ກະເປົາຄອດບໍດີ້%20Uniqlo🛒" target="_blank">
+                    <button class="buy-btn">💬 ສັ່ງຊື້ (WhatsApp)</button>
+                </a>
+            </div>
+
             <div class="product-item shirt">
                 <img src="shirt1.jpg" onerror="this.src='https://via.placeholder.com/150/FFD700/000000?text=ເສື້ອແຟຊັ່ນ'">
                 <h4>ເສື້ອແຟຊັ່ນຜູ້ຍິງ</h4>
                 <div class="price">120,000 ກີບ</div>
-                <button class="details-btn" onclick="openDetails('ເສື້ອແຟຊັ່ນຜູ້ຍິງ', '120,000 ກີບ', 'ຂາວ, ດຳ, ຂຽວ', 'S, M, L', 'ເສື້ອຜ້າໄໝນຸ້ມ ສະບາຍ', ['shirt1.jpg'])">
-                    🖼️ ເບິ່ງລາຍລະອຽດ (ສີ/Size)
+                <button class="details-btn" onclick="openDetails('ເສື້ອແຟຊັ່ນຜູ້ຍິງ', '120,000 ກີບ', 'ຂາວ, ດຳ, ຂຽວ', ['shirt1.jpg'])">
+                    🖼️ ເບິ່ງລາຍລະອຽດ
                 </button>
                 <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ເສື້ອແຟຊັ່ນຜູ້ຍິງ" target="_blank">
                     <button class="buy-btn">💬 ສັ່ງຊື້ (WhatsApp)</button>
@@ -264,8 +277,8 @@ a { text-decoration: none; }
                 <img src="pants1.jpg" onerror="this.src='https://via.placeholder.com/150/D4AF37/ffffff?text=ໂສ້ງຢີນ'">
                 <h4>ໂສ້ງຢີນຜູ້ຍິງ</h4>
                 <div class="price">160,000 ກີບ</div>
-                <button class="details-btn" onclick="openDetails('ໂສ້ງຢີນຜູ້ຍິງ', '160,000 ກີບ', 'ຢີນເຂັ້ມ, ດຳ', 'S, M, L', 'ໂສ້ງຢີນເອວສູງ ຂາຍາວ', ['pants1.jpg'])">
-                    🖼️ ເບິ່ງລາຍລະອຽດ (ສີ/Size)
+                <button class="details-btn" onclick="openDetails('ໂສ້ງຢີນຜູ້ຍິງ', '160,000 ກີບ', 'ຢີນເຂັ້ມ, ດຳ', ['pants1.jpg'])">
+                    🖼️ ເບິ່ງລາຍລະອຽດ
                 </button>
                 <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ໂສ້ງຢີນຜູ້ຍິງ" target="_blank">
                     <button class="buy-btn">💬 ສັ່ງຊື້ (WhatsApp)</button>
@@ -276,24 +289,10 @@ a { text-decoration: none; }
                 <img src="skirt1.jpg" onerror="this.src='https://via.placeholder.com/150/ffb6c1/000000?text=ກະໂປ່ງແຟຊັ່ນ'">
                 <h4>ກະໂປ່ງແຟຊັ່ນງາມໆ</h4>
                 <div class="price">140,000 ກີບ</div>
-                <button class="details-btn" onclick="openDetails('ກະໂປ່ງແຟຊັ່ນງາມໆ', '140,000 ກີບ', 'ຄີມ, ບົວ', 'Free Size', 'ກະໂປ່ງຊັ້ນໆ ໜ້າຮັກ', ['skirt1.jpg'])">
-                    🖼️ ເບິ່ງລາຍລະອຽດ (ສີ/Size)
+                <button class="details-btn" onclick="openDetails('ກະໂປ່ງແຟຊັ່ນງາມໆ', '140,000 ກີບ', 'ຄີມ, ບົວ', ['skirt1.jpg'])">
+                    🖼️ ເບິ່ງລາຍລະອຽດ
                 </button>
                 <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ກະໂປ່ງແຟຊັ່ນງາມໆ" target="_blank">
-                    <button class="buy-btn">💬 ສັ່ງຊື້ (WhatsApp)</button>
-                </a>
-            </div>
-
-            <div class="product-item bag">
-                <img src="bag1_1.jpg" onerror="this.src='https://via.placeholder.com/150/8a2be2/ffffff?text=ກະເປົາແຟຊັ່ນ'">
-                <h4>ກະເປົາຄອດບໍດີ້ Uniqlo🛒</h4>
-                <div class="price">180,000 ກີບ</div>
-                
-            <button class="details-btn" onclick="openDetails('ກະເປົາຄອດບໍດີ້ Uniqlo🛒', '189,000 ກີບ', 'ມ່ວງ, ແດງ, ຄຣີມ, ນູດ, ກະປິ', ['bag1_1.jpg', 'bag1_2.jpg', 'bag1_3.jpg'])">
-                🖼️ ເບິ່ງຫຼາຍໆຮູບ / ລາຍລະອຽດ
-</button>
-                
-                <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ກະເປົາຖືແຟຊັ່ນ Luxe" target="_blank">
                     <button class="buy-btn">💬 ສັ່ງຊື້ (WhatsApp)</button>
                 </a>
             </div>
@@ -315,8 +314,6 @@ a { text-decoration: none; }
         <div class="modal-info">
             <p>💰 <span>ລາຄາ:</span> <b id="modalPrice"></b></p>
             <p>🎨 <span>ສີທີ່ມີ:</span> <span id="modalColors" style="color:#333;"></span></p>
-            <p>📏 <span>ໄຊສ໌ (Size):</span> <span id="modalSizes" style="color:#333;"></span></p>
-            <p>📝 <span>ລາຍລະອຽດ:</span> <span id="modalDesc" style="color:#666;"></span></p>
         </div>
     </div>
 </div>
@@ -344,12 +341,10 @@ function filterCategory(category, btnElement) {
     });
 }
 
-function openDetails(title, price, colors, sizes, desc, imageArray) {
+function openDetails(title, price, colors, imageArray) {
     document.getElementById('modalTitle').innerText = title;
     document.getElementById('modalPrice').innerText = price;
     document.getElementById('modalColors').innerText = colors;
-    document.getElementById('modalSizes').innerText = sizes;
-    document.getElementById('modalDesc').innerText = desc;
 
     let mainImg = document.getElementById('mainImg');
     mainImg.src = imageArray[0];
