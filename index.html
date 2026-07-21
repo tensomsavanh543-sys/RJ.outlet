@@ -21,11 +21,11 @@ header {
     padding: 25px 15px;
 }
 
-/* ຕົບແຕ່ງໂລໂກ້ */
+/* ຕົບແຕ່ງໂລໂກ້ໃຫ້ເປັນວົງມົນ */
 .logo {
     width: 110px;
     height: 110px;
-    border-radius: 50%; /* ເຮັດເປັນຮູບວົງກົນ */
+    border-radius: 50%; /* ເຮັດເປັນຮູບວົງມົນ */
     border: 3px solid #FFF;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -144,7 +144,7 @@ a { text-decoration: none; }
 <body>
 
 <header>
-    <img src="logo.jpg" alt="RJ OUTLET Logo" class="logo" onerror="this.src='https://via.placeholder.com/110/FFD700/000000?text=RJ+OUTLET'">
+    <img src="../logo.jpg" alt="RJ OUTLET Logo" class="logo" onerror="this.src='https://via.placeholder.com/110/FFD700/000000?text=RJ+OUTLET'">
     
     <h1>RJ OUTLET</h1>
     <p>ແຟຊັ່ນຜູ້ຍິງ ຄຸນນະພາບດີ ສິນຄ້າ OUTLET</p>
@@ -186,70 +186,5 @@ a { text-decoration: none; }
 
         <div class="category-menu">
             <button class="cat-btn active" onclick="filterCategory('all', this)">ທັງໝົດ</button>
-            <button class="cat-btn" onclick="filterCategory('shirt', this)">👔 ເສື້ອ</button>
-            <button class="cat-btn" onclick="filterCategory('pants', this)">👖 ໂສ້ງ</button>
-            <button class="cat-btn" onclick="filterCategory('dress', this)">👗 ເດຣສ</button>
-        </div>
-
-        <div class="product-grid">
-
-            <div class="product-item shirt">
-                <img src="https://via.placeholder.com/150/FFD700/000000?text=ເສື້ອແຟຊັ່ນ" alt="ເສື້ອ">
-                <h4>ເສື້ອແຟຊັ່ນ</h4>
-                <div class="price">120,000 ກີບ</div>
-                <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ເສື້ອແຟຊັ່ນ" target="_blank">
-                    <button class="buy-btn">💬 ສັ່ງຊື້</button>
-                </a>
-            </div>
-
-            <div class="product-item pants">
-                <img src="https://via.placeholder.com/150/D4AF37/ffffff?text=ໂສ້ງຢີນ" alt="ໂສ້ງ">
-                <h4>ໂສ້ງຢີນຜູ້ຍິງ</h4>
-                <div class="price">160,000 ກີບ</div>
-                <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ໂສ້ງຢີນຜູ້ຍິງ" target="_blank">
-                    <button class="buy-btn">💬 ສັ່ງຊື້</button>
-                </a>
-            </div>
-
-            <div class="product-item dress">
-                <img src="https://via.placeholder.com/150/ffb6c1/000000?text=ຊຸດເດຣສ" alt="ເດຣສ">
-                <h4>ຊຸດເດຣສອອກງານ</h4>
-                <div class="price">190,000 ກີບ</div>
-                <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ຊຸດເດຣສອອກງານ" target="_blank">
-                    <button class="buy-btn">💬 ສັ່ງຊື້</button>
-                </a>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<script>
-function showPage(pageId) {
-    document.getElementById('home-page').classList.add('hidden');
-    document.getElementById('catalog-page').classList.add('hidden');
-    
-    document.getElementById(pageId).classList.remove('hidden');
-    window.scrollTo(0, 0);
-}
-
-function filterCategory(category, btnElement) {
-    let buttons = document.querySelectorAll('.cat-btn');
-    buttons.forEach(btn => btn.classList.remove('active'));
-    btnElement.classList.add('active');
-
-    let products = document.querySelectorAll('.product-item');
-    products.forEach(item => {
-        if (category === 'all' || item.classList.contains(category)) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-}
-</script>
-
-</body>
-</html>
+            <button class="cat-btn"
+        
