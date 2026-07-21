@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RJ OUTLET</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #FAFAFA;
+    color: #333;
+}
+
+/* ສ່ວນ Header */
+header {
+    background: linear-gradient(135deg, #FFD700, #D4AF37);
+    color: #000;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+/* ຕົບແຕ່ງໂລໂກ້ */
+.logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%; /* ເຮັດເປັນຮູບວົງກົນ */
+    border: 3px solid #FFF;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    margin-bottom: 10px;
+}
+
+header h1 {
+    margin: 5px 0;
+    font-size: 26px;
+    color: #000;
+}
+
+header p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.container {
+    padding: 15px;
+}
+
+.card {
+    background: #FFF;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 18px;
+    border: 2px solid #D4AF37;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* ປຸ່ມຫຼັກ */
+.main-btn {
+    background: linear-gradient(135deg, #FFD700, #D4AF37);
+    color: #000;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* ໝວດໝູ່ສິນຄ້າ */
+.category-menu {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.cat-btn {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cat-btn.active {
+    background: #D4AF37;
+    color: #fff;
+    border-color: #D4AF37;
+}
+
+/* ຕາຕະລາງສິນຄ້າ */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+.product-item {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.product-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.price {
+    color: #d63384;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.buy-btn {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+}
+
+a { text-decoration: none; }
+.hidden { display: none !important; }
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.jpg" alt="RJ OUTLET Logo" class="logo" onerror="this.src='https://via.placeholder.com/110/FFD700/000000?text=RJ+OUTLET'">
+    
+    <h1>RJ OUTLET</h1>
+    <p>ແຟຊັ່ນຜູ້ຍິງ ຄຸນນະພາບດີ ສິນຄ້າ OUTLET</p>
+</header>
+
+<div class="container">
+
+    <div id="home-page">
+        
+        <div class="card">
+            <h2>🛍️ ເມນູຫຼັກ</h2>
+            
+            <button class="main-btn" onclick="showPage('catalog-page')">
+                👗 ເລືອກເບິ່ງສິນຄ້າ
+            </button>
+
+            <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20RJ%20OUTLET%20ຢາກຕິດຕໍ່ສອບຖາມ/ສັ່ງຊື້ສິນຄ້າ" target="_blank">
+                <button class="main-btn" style="background: linear-gradient(135deg, #25D366, #128C7E); color: white;">
+                    💬 ຕິດຕໍ່ສັ່ງສິນຄ້າ (WhatsApp)
+                </button>
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>📍 ສະຖານທີ່ຮ້ານ</h3>
+            <p>ຮ້ານ RJ OUTLET ຕັ້ງຢູ່: ບ້ານ ສະພານທອງເໜືອ, ເມືອງ ສີສັດຕະນາກ, ນະຄອນຫຼວງວຽງຈັນ</p>
+            <p>📞 ເບີໂທ: 020 55 429 270</p>
+        </div>
+
+    </div>
+
+    <div id="catalog-page" class="hidden">
+        
+        <button onclick="showPage('home-page')" style="margin-bottom: 15px; padding: 10px 18px; border-radius: 8px; border: 1px solid #D4AF37; background: #fff; font-weight: bold; cursor: pointer;">
+            ⬅️ ກັບຄືນໜ້າຫຼັກ
+        </button>
+
+        <h2 style="text-align: center; color: #D4AF37;">🛍️ ໝວດໝູ່ສິນຄ້າ</h2>
+
+        <div class="category-menu">
+            <button class="cat-btn active" onclick="filterCategory('all', this)">ທັງໝົດ</button>
+            <button class="cat-btn" onclick="filterCategory('shirt', this)">👔 ເສື້ອ</button>
+            <button class="cat-btn" onclick="filterCategory('pants', this)">👖 ໂສ້ງ</button>
+            <button class="cat-btn" onclick="filterCategory('dress', this)">👗 ເດຣສ</button>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-item shirt">
+                <img src="https://via.placeholder.com/150/FFD700/000000?text=ເສື້ອແຟຊັ່ນ" alt="ເສື້ອ">
+                <h4>ເສື້ອແຟຊັ່ນ</h4>
+                <div class="price">120,000 ກີບ</div>
+                <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ເສື້ອແຟຊັ່ນ" target="_blank">
+                    <button class="buy-btn">💬 ສັ່ງຊື້</button>
+                </a>
+            </div>
+
+            <div class="product-item pants">
+                <img src="https://via.placeholder.com/150/D4AF37/ffffff?text=ໂສ້ງຢີນ" alt="ໂສ້ງ">
+                <h4>ໂສ້ງຢີນຜູ້ຍິງ</h4>
+                <div class="price">160,000 ກີບ</div>
+                <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ໂສ້ງຢີນຜູ້ຍິງ" target="_blank">
+                    <button class="buy-btn">💬 ສັ່ງຊື້</button>
+                </a>
+            </div>
+
+            <div class="product-item dress">
+                <img src="https://via.placeholder.com/150/ffb6c1/000000?text=ຊຸດເດຣສ" alt="ເດຣສ">
+                <h4>ຊຸດເດຣສອອກງານ</h4>
+                <div class="price">190,000 ກີບ</div>
+                <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ຊຸດເດຣສອອກງານ" target="_blank">
+                    <button class="buy-btn">💬 ສັ່ງຊື້</button>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function showPage(pageId) {
+    document.getElementById('home-page').classList.add('hidden');
+    document.getElementById('catalog-page').classList.add('hidden');
+    
+    document.getElementById(pageId).classList.remove('hidden');
+    window.scrollTo(0, 0);
+}
+
+function filterCategory(category, btnElement) {
+    let buttons = document.querySelectorAll('.cat-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    btnElement.classList.add('active');
+
+    let products = document.querySelectorAll('.product-item');
+    products.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+</script>
+
+</body>
+</html>
