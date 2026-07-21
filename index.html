@@ -247,6 +247,20 @@ a { text-decoration: none; }
 
         <div class="product-grid">
 
+            <div class="product-item shirt">
+                <img src="anewday1.jpg" onerror="this.src='https://via.placeholder.com/150/FFD700/000000?text=A+NEW+DAY'">
+                <h4>ເສື້ອກັກແຂນກີ້ນ A NEW DAY ແທ້ 🛍️</h4>
+                <div class="price">230,000 ກີບ</div>
+                
+                <button class="details-btn" onclick="openDetails('ເສື້ອກັກແຂນກີ້ນ A NEW DAY ແທ້ 🛍️', '230,000 ກີບ', 'ສີຂາວ, ສີດຳ, ສີບົວ', ['anewday1.jpg', 'anewday2.jpg', 'anewday3.jpg'], '🚩 ມີພ້ອມສົ່ງເດີ ຫາກໍເຂົ້າມາໃໝ່ລ້າສຸດ\n📏 ຂະໜາດ (Size):\n• Size XS: ໜ້າຜ້າ 34\n• Size S: ໜ້າຜ້າ 36\n• Size M: ໜ້າຜ້າ 38')">
+                    🖼️ ເບິ່ງ 3 ຮູບ / ລາຍລະອຽດ
+                </button>
+                
+                <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ເສື້ອກັກແຂນກີ້ນ%20A%20NEW%20DAY%20ແທ້%20ລາຄາ%20230,000%20ກີບ" target="_blank">
+                    <button class="buy-btn">💬 ສັ່ງຊື້ (WhatsApp)</button>
+                </a>
+            </div>
+
             <div class="product-item bag">
                 <img src="bag1_1.jpg" onerror="this.src='https://via.placeholder.com/150/8a2be2/ffffff?text=Uniqlo+Bag'">
                 <h4>ກະເປົາຄອດບໍດີ້ Uniqlo🛒</h4>
@@ -271,18 +285,6 @@ a { text-decoration: none; }
                 </button>
                 
                 <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ກະເປົາຄາດບ່າ%20Lululemon%20ຂອງແທ້%20💯%20ລາຄາ%20219,000%20ກີບ" target="_blank">
-                    <button class="buy-btn">💬 ສັ່ງຊື້ (WhatsApp)</button>
-                </a>
-            </div>
-
-            <div class="product-item shirt">
-                <img src="shirt1.jpg" onerror="this.src='https://via.placeholder.com/150/FFD700/000000?text=ເສື້ອແຟຊັ່ນ'">
-                <h4>ເສື້ອແຟຊັ່ນຜູ້ຍິງ</h4>
-                <div class="price">120,000 ກີບ</div>
-                <button class="details-btn" onclick="openDetails('ເສື້ອແຟຊັ່ນຜູ້ຍິງ', '120,000 ກີບ', 'ຂາວ, ດຳ, ຂຽວ', ['shirt1.jpg'], '')">
-                    🖼️ ເບິ່ງລາຍລະອຽດ
-                </button>
-                <a href="https://wa.me/8562055429270?text=ສະບາຍດີ%20ຢາກສັ່ງຊື້:%20ເສື້ອແຟຊັ່ນຜູ້ຍິງ" target="_blank">
                     <button class="buy-btn">💬 ສັ່ງຊື້ (WhatsApp)</button>
                 </a>
             </div>
@@ -328,7 +330,7 @@ a { text-decoration: none; }
         <div class="modal-info">
             <p>💰 <span>ລາຄາ:</span> <b id="modalPrice"></b></p>
             <p>🎨 <span>ສີທີ່ມີ:</span> <span id="modalColors" style="color:#333;"></span></p>
-            <p id="descContainer" style="display:none;">📝 <span>ລາຍລະອຽດ:</span> <span id="modalDesc" style="color:#555; font-size:13px;"></span></p>
+            <p id="descContainer" style="display:none; white-space: pre-line;">📝 <span>ລາຍລະອຽດ:</span><br><span id="modalDesc" style="color:#555; font-size:13px;"></span></p>
         </div>
     </div>
 </div>
